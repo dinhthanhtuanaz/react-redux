@@ -4,3 +4,10 @@ export const addHobby = (hobby) => {
         payload: hobby
     }
 }
+
+export const setActiveHobby = hobby => {
+    return {
+        type: 'SET_ACTIVE_HOBBY',
+        payload: hobby
+    }
+}

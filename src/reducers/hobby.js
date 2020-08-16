@@ -2,7 +2,7 @@ const initState = {
     list: [
         {id:1, title:'ABC'}
     ],
-    activeId: null
+    activeId: ''
 }
 
 const hobbyReducer = (state = initState, action) => {
@@ -13,6 +13,11 @@ const hobbyReducer = (state = initState, action) => {
             return {
                 ...state,
                 list: newList
+            }
+        case 'SET_ACTIVE_HOBBY':
+            return {
+                ...state,
+                activeId: action.payload.id
             }
         default:
             return state;
